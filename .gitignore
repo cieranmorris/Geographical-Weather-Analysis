@@ -1,3 +1,6 @@
+api_keys.py
+api_keys2.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
