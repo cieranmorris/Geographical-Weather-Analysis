@@ -8,6 +8,12 @@ Whether financial, political, or social -- data's true power lies in its ability
 
 In this project, I created a Python script to visualize the weather of 500+ cities across the world, at varying distances from the equator. To accomplish this, I utilized a [simple Python library](https://pypi.python.org/pypi/citipy), the [OpenWeatherMap API](https://openweathermap.org/api), and critical thinking skills to create a representative model of weather across world cities.
 
+* Initial city data retrieval using Python API calls:
+
+![retrieval](Images/city_retrieval.png)
+
+### Initial Scatter Plots
+
 The four main weather conditions that would support an investigation of climatic conditions in relation to distance from equator are Maximum Temperature, Humidity Percentage, Cloudiness Percentage, and Wind Speed. I created a series of scatter plots to showcase theserelationships, with an additional written assessment underneath each plot.
 
 * **Temperature (F) vs. Latitude:**
@@ -29,17 +35,48 @@ The four main weather conditions that would support an investigation of climatic
 
 ![CityLatWind](Images/city_lat_percent_wind.png)
 
+## Linear Regressions by Hemisphere
 
-The second requirement is to run linear regression on each relationship. This time, separate the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude):
+In order to observe any potential correlations between city latitude and weather conditions, I ran linear regressions on Maximum Temperature, Humidity, Cloudiness, and Wind Speed. This time, I separated the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude) in order to gain a better understanding of weather conditions in relation to a city's proximity to the Equator.
 
-* Northern Hemisphere - Temperature (F) vs. Latitude
-* Southern Hemisphere - Temperature (F) vs. Latitude
-* Northern Hemisphere - Humidity (%) vs. Latitude
-* Southern Hemisphere - Humidity (%) vs. Latitude
-* Northern Hemisphere - Cloudiness (%) vs. Latitude
-* Southern Hemisphere - Cloudiness (%) vs. Latitude
-* Northern Hemisphere - Wind Speed (mph) vs. Latitude
-* Southern Hemisphere - Wind Speed (mph) vs. Latitude
+* **Northern Hemisphere - Temperature (F) vs. Latitude**
+
+![NHTemp](Images/NH_max_temp_lat.png)
+
+
+* **Southern Hemisphere - Temperature (F) vs. Latitude**
+
+![SHTemp](Images/SH_max_temp_lat.png)
+
+
+* **Northern Hemisphere - Humidity (%) vs. Latitude**
+
+![NH_Humid](Images/NH_humid_lat.png)
+
+
+* **Southern Hemisphere - Humidity (%) vs. Latitude**
+
+![SH_Humid](Images/SH_humid_lat.png)
+
+
+* **Northern Hemisphere - Cloudiness (%) vs. Latitude**
+
+![NHCloud](Images/NH_cloud_lat.png)
+
+
+* **Southern Hemisphere - Cloudiness (%) vs. Latitude**
+
+![SHCloud](Images/SH_cloud_lat.png)
+
+
+* **Northern Hemisphere - Wind Speed (mph) vs. Latitude**
+
+![NHWind](Images/NH_wind_lat.png
+
+)
+* **Southern Hemisphere - Wind Speed (mph) vs. Latitude**
+
+![SHWind](Images/SH_wind_lat.png)
 
 After each pair of plots, take the time to explain what the linear regression is modeling. For example, describe any relationships you notice and any other analysis you may have.
 
