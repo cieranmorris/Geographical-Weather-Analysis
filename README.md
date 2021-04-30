@@ -1,41 +1,34 @@
-# Python API Homework - What's the Weather Like?
+# Geographical Weather Analysis - Python API Calls
 
-## Background
+## Background Information
 
 Whether financial, political, or social -- data's true power lies in its ability to answer questions definitively. So let's take what you've learned about Python requests, APIs, and JSON traversals to answer a fundamental question: "What's the weather like as we approach the equator?"
 
-Now, we know what you may be thinking: _"Duh. It gets hotter..."_
-
-But, if pressed, how would you **prove** it?
-
-![Equator](Images/equatorsign.png)
-
-### Before You Begin
-
-1. Create a new repository for this project called `python-api-challenge`. **Do not add this homework to an existing repository**.
-
-1. Clone the new repository to your computer.
-
-1. Inside your local git repository, create a directory for each of the Python Challenges: `WeatherPy` and `VacationPy`.
-
-1. Create a Jupyter notebook called `WeatherPy.ipynb` and save it in the `WeatherPy` folder. 
-
-1. Create a Jupyter notebook called `VacationPy` and save it in the `VacationPy` folder. 
-
-1. Push the above changes to GitHub and then begin your work. 
-
 ## Part I - WeatherPy
 
-In this example, you'll be creating a Python script to visualize the weather of 500+ cities across the world, at varying distances from the equator. To accomplish this, you'll be utilizing a [simple Python library](https://pypi.python.org/pypi/citipy), the [OpenWeatherMap API](https://openweathermap.org/api), and a little common sense to create a representative model of weather across world cities.
+In this project, I created a Python script to visualize the weather of 500+ cities across the world, at varying distances from the equator. To accomplish this, I utilized a [simple Python library](https://pypi.python.org/pypi/citipy), the [OpenWeatherMap API](https://openweathermap.org/api), and critical thinking skills to create a representative model of weather across world cities.
 
-The first requirement is to create a series of scatter plots to showcase the following relationships:
+The four main weather conditions that would support an investigation of climatic conditions in relation to distance from equator are Maximum Temperature, Humidity Percentage, Cloudiness Percentage, and Wind Speed. I created a series of scatter plots to showcase theserelationships, with an additional written assessment underneath each plot.
 
-* Temperature (F) vs. Latitude
-* Humidity (%) vs. Latitude
-* Cloudiness (%) vs. Latitude
-* Wind Speed (mph) vs. Latitude
+* **Temperature (F) vs. Latitude:**
 
-After each plot, add a sentence or two explaining what the code is analyzing.
+![CityLatTemp](Images/city_lat_max_temp.png)
+
+
+* **Humidity (%) vs. Latitude**
+
+![CityLatHumid](Images/city_lat_percent_humidity.png)
+
+
+* **Cloudiness (%) vs. Latitude**
+
+![CityLatCloud](Images/city_lat_percent_cloud.png)
+
+
+* **Wind Speed (mph) vs. Latitude**
+
+![CityLatWind](Images/city_lat_wind.png)
+
 
 The second requirement is to run linear regression on each relationship. This time, separate the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude):
 
@@ -96,13 +89,6 @@ As final considerations:
 * You must use proper labeling of your plots, including aspects like: Plot Titles (with date of analysis) and Axis Labels.
 * For max intensity in the heat map, try setting it to the highest humidity found in the data set.
 
-## Hints and Considerations
-
-* The city data you generate is based on random coordinates as well as different query times. As such, your outputs will not be an exact match to the provided starter notebook.
-
-* If you'd like a refresher on the geographic coordinate system, [this site](http://desktop.arcgis.com/en/arcmap/10.3/guide-books/map-projections/about-geographic-coordinate-systems.htm) has great information.
-
-* Next, spend the requisite time necessary to study the OpenWeatherMap API. Based on your initial study, you should be able to answer basic questions about the API: Where do you request the API key? Which Weather API in particular will you need? What URL endpoints does it expect? What JSON structure does it respond with? Before you write a line of code, you should aim to have a crystal clear understanding of your intended outcome.
 
 * Starter code for Citipy has been provided. However, if you're craving an extra challenge, push yourself to learn how it works by checking out the [citipy Python library](https://pypi.python.org/pypi/citipy). Before you try to incorporate the library into your analysis, start by creating simple test cases outside your main script to confirm that you are using it correctly. Too often, when introduced to a new library, students get bogged down by the most minor of errors -- spending hours investigating their entire code -- when, in fact, a simple and focused test would have shown their basic utilization of the library was wrong from the start. Don't let this be you!
 
@@ -114,9 +100,6 @@ As final considerations:
 
 * Remember that each coordinate will trigger a separate call to the Google API. If you're creating your own criteria to plan your vacation, try to reduce the results in your DataFrame to 10 or fewer cities.
 
-* Ensure your repository has regular commits (i.e. 20+ commits) and a thorough README.md file.
-
-* Lastly, remember -- this is a challenging activity. Push yourself! If you complete this task, then you can safely say that you've gained a strong mastery of the core foundations of data analytics and it will only go better from here. Good luck!
 
 ### Copyright
 
