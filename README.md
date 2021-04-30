@@ -27,7 +27,7 @@ The four main weather conditions that would support an investigation of climatic
 
 * **Wind Speed (mph) vs. Latitude**
 
-![CityLatWind](Images/city_lat_wind.png)
+![CityLatWind](Images/city_lat_percent_wind.png)
 
 
 The second requirement is to run linear regression on each relationship. This time, separate the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude):
