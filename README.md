@@ -89,47 +89,39 @@ Your final notebook must:
 
 ## Part II - VacationPy
 
-Now let's use your skills in working with weather data to plan future vacations. Use jupyter-gmaps and the Google Places API for this part of the assignment.
+Now that I've assessed weather data for 500+ cities around the globe, the next second half of this project was to display local hotels in those cities and nearby locations for a future vacation. In this portion of the assessment I utilized jupyter-gmaps and the Google Places API to generate a heat map with associated pins marking the locations of hotels around the world.
 
-* **Note:** Remember that any API usage beyond the $200 credit will be charged to your personal account. You can set quotas and limits to your daily requests to be sure you can't be charged. Check out [Google Maps Platform Billing](https://developers.google.com/maps/billing/gmp-billing#monitor-and-restrict-consumption) and [Manage your cost of use](https://developers.google.com/maps/documentation/javascript/usage-and-billing#set-caps) for more information.
 
-To complete this part of the assignment,you will need to do the following:
+* For a global view, I generated a heat map that displays the humidity for every city from Part I, which some additional parameters to narrow down the DataFrame for "ideal weather conditions". These conditional statements included:
 
-* Create a heat map that displays the humidity for every city from Part I.
+  * A max temperature lower than 80 degrees but higher than 70
 
-  ![heatmap](Images/heatmap.png)
+  * Wind speed less than 10 mph
 
-* Narrow down the DataFrame to find your ideal weather condition. For example:
+  * Zero cloudiness
 
-  * A max temperature lower than 80 degrees but higher than 70.
+  * I dropped any entries that did not meet all three weather criteria.
 
-  * Wind speed less than 10 mph.
+* The initial global humidity heat map:
 
-  * Zero cloudiness.
+![heatmap](Images/weather_heatmap.png)
 
-  * Drop any rows that don't contain all three conditions. You want to be sure the weather is ideal.
+  
+* Using Google Places API, I was able to find the first hotel for each city located within 5000 meters of my initial coordinates.
 
-  * **Note:** Feel free to adjust your specifications but be sure to limit the number of rows returned by your API requests to a reasonable number; e.g., 10. 
+* Display of nearest hotels:
 
-* Use Google Places API to find the first hotel for each city located within 5000 meters of your coordinates.
+![nearestHotels](Images/nearest_hotels.png)
 
-* Plot the hotels on top of the humidity heatmap with each pin containing the **Hotel Name**, **City**, and **Country**.
+* Finally, I generated Google Map pins containing the **Hotel Name**, **City**, and **Country** for each coordinate, and overlayed them overtop of my humidity heat map.
 
-  ![hotel map](Images/hotel_map.png)
+  ![hotelPins](Images/hotel_pins.png)
 
 As final considerations:
 
 * You must complete your analysis using a Jupyter notebook.
 * You must use the Matplotlib or Pandas plotting libraries.
-* For Part I, you must include a written description of three observable trends based on the data.
-* For Part II, you must include a screenshot of the heatmap you create and include it in your submission.
-* You must use proper labeling of your plots, including aspects like: Plot Titles (with date of analysis) and Axis Labels.
-* For max intensity in the heat map, try setting it to the highest humidity found in the data set.
 
-
-* Starter code for Citipy has been provided. However, if you're craving an extra challenge, push yourself to learn how it works by checking out the [citipy Python library](https://pypi.python.org/pypi/citipy). Before you try to incorporate the library into your analysis, start by creating simple test cases outside your main script to confirm that you are using it correctly. Too often, when introduced to a new library, students get bogged down by the most minor of errors -- spending hours investigating their entire code -- when, in fact, a simple and focused test would have shown their basic utilization of the library was wrong from the start. Don't let this be you!
-
-* Part of our expectation in this challenge is that you will use critical thinking skills to understand how and why we're recommending the tools we are. What is Citipy for? Why would you use it in conjunction with the OpenWeatherMap API? How would you do so?
 
 * In building your script, pay attention to the cities you are using in your query pool. Are you getting coverage of the full gamut of latitudes and longitudes? Or are you simply choosing 500 cities concentrated in one region of the world? Even if you were a geographic genius, simply rattling 500 cities based on your human selection would create a biased dataset. Be thinking of how you should counter this. (Hint: Consider the full range of latitudes).
 
